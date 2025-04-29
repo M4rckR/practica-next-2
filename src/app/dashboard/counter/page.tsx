@@ -1,11 +1,22 @@
-import React from 'react'
 
-const page = () => {
+import { Metadata } from "next";
+import { CartCounter } from "@/app/shoping-cart/components/CartCounter";
+export const metadata:Metadata = {
+  title: 'Counter',
+  description: 'Counter Client Side',
+}
+
+const CounterPage = () => {
+
+  
+
+
   return (
-    <>
-      Sidebar
-    </>
+    <div className="flex flex-col items-center justify-center w-full h-full">
+        <h1 className="text-4xl font-bold">Counter</h1>
+        <CartCounter />
+    </div>
   )
 }
 
-export default page
+export default CounterPage

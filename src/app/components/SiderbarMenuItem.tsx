@@ -21,7 +21,7 @@ export const SiderbarMenuItem = ({path, icon, title, subTitle}: SiderbarMenuItem
 
     <Link   
     href={path}
-    className={`w-full px-2 inline-flex space-x-2 items-center border-b rounded-xl border-slate-700 py-3  hover:bg-white/5 transition ease-linear duration-150 ${isActive ? 'bg-blue-800' : 'bg-white/5'}`
+    className={`w-full px-2 inline-flex space-x-2 items-center border-b rounded-xl border-slate-700 py-3   transition ease-linear duration-150 ${isActive ? 'bg-blue-800' : 'bg-white/5'}`
 }
   >
     <div>
