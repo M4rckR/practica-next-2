@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IoBrowsersOutline, IoCalculator, IoFootball, IoLogoReact } from "react-icons/io5";
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoHeart, IoLogoReact } from "react-icons/io5";
 import { SiderbarMenuItem } from "./SiderbarMenuItem";
 
 const menuItems = [
@@ -17,9 +17,15 @@ const menuItems = [
   },
   {
     path: '/dashboard/pokemons',
-    icon: <IoFootball size={40} />,
-    title: 'Pokemons',
-    subTitle: 'Generacion estática',
+      icon: <IoFootball size={40} />,
+      title: 'Pokemons',
+      subTitle: 'Generacion estática',
+  },
+  {
+    path: '/dashboard/favorites',
+    icon: <IoHeart size={40} />,
+    title: 'Favoritos',
+    subTitle: 'Pokemons favoritos',
   },
 ]
 
@@ -54,6 +60,9 @@ export const Sidebar = () => {
               priority
             />
 
+
+
+
           </span>
           <span className="text-sm md:text-base font-bold">Marcos Romero</span>
         </a>
@@ -71,3 +80,5 @@ export const Sidebar = () => {
     </div>
   );
 };
+
+
