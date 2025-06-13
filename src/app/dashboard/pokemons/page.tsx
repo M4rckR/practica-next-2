@@ -4,15 +4,9 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-    title: 'Pokemons',
-    description: 'Pokemons estaticos',
-}
-=======
   title: "Pokemons",
   description: "Pokemons page",
 };
->>>>>>> 46c80b2a2d866504312a520bb463ca2878852ff2
 
 const getPokemons = async (limit=20, offset=0):Promise<SimplePokemon[]> => {
     const data:PokemonsResponses = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
@@ -20,7 +14,7 @@ const getPokemons = async (limit=20, offset=0):Promise<SimplePokemon[]> => {
 
 
     const pokemons = data.results.map(pokemon => ({
-        id: pokemon.url.split('/').at(-2)!,
+        id: Number(pokemon.url.split('/').at(-2)!),
         name: pokemon.name,
     }))
 
