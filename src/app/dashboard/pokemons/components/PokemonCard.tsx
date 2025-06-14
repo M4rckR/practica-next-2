@@ -13,14 +13,14 @@ interface PokemonCardProps {
 export const PokemonCard = ({pokemon}:PokemonCardProps) => {
 
     const {id, name} = pokemon;
-    const isFavorite = useAppSelector(state => !!state.pokemons[id]);
+    const isFavorite = useAppSelector(state => !!state.pokemons.favorites?.[id]);
     const dispatch = useAppDispatch();
     
     const onToggle = () => {
       dispatch(toggleFavorite(pokemon))
     }
 
-    // console.log(isFavorite);
+    // console.log(isFavorite); 
 
   return (
     <div className="mx-auto right-0 mt-2 w-60">
